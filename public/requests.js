@@ -1,5 +1,5 @@
 let apiKey = 'ed4371fa'
-let omdbUrl = `http://www.omdbapi.com/?apikey=${apiKey}&type=movie&`
+let omdbUrl = `https://www.omdbapi.com/?apikey=${apiKey}&type=movie&`
 
 let getMovieSearch = function(searchString) {
   return fetch(omdbUrl + "s=" + searchString) 
