@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head><title>Favorite Movie Tracker</title></head>
+<h1>Favorite Movie Tracker</h1>
+<form id="search-form">
+  <label>Movie Name</label>
+  <input type="text" name="s" value="Star Wars" id="search-string">
+  <input type="submit" value="Search">
+</form>
+<p><a href="#" id="favorites">Show favorite movies</a></p>
+<ul id="search-results"></ul>
+<div id="movie-details"></div>
+
+<script src="error.js"></script>
+<script src="requests.js"></script>
+<script src="events.js"></script>
+<script src="render-dom.js"></script>
+<script>
+  let searchResults = document.getElementById("search-results")
+  let movieDetails = document.getElementById('movie-details')
+  let searchForm = document.getElementById("search-form")
+  let favoritesList = document.getElementById("favorites")
+
+  searchForm.addEventListener('submit', events.onSearchFormSubmit)
+  favoritesList.addEventListener('click', events.onShowFavoritesClick)
+</script>
